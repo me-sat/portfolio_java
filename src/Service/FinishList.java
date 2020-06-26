@@ -24,7 +24,7 @@ public void execute(HttpServletRequest request) throws SQLException{
 		//daoクラスのgetlistAllと同様に、データベースの各行の配列の取得
 		ArrayList<Dto>list =dao.getListAll(true);  
 		
-		if(list !=null) { //list(TODOLIST)がnullじゃなかったら
+		if(list.size() > 0) { //list(TODOLIST)がnullじゃなかったら
 			request.setAttribute("list",list); //requestスコープに"list"という名前でlist変数を設定
 		}else { //list(TODOLIST)が何もなかったら
 			request.setAttribute("message","まだデータがありません");

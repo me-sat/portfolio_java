@@ -60,7 +60,7 @@ public class Main extends HttpServlet {
 		if (btn.equals("Add List")) {
 			dbAccess= new Insert();
 		
-		}else if(btn.equals("done")) {
+		}else if(btn.equals("Done")) {
 			dbAccess= new Update();
 			
 		}else if(btn.equals("Delete")) {
