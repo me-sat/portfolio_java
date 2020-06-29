@@ -5,7 +5,7 @@ const weeks = ['日', '月', '火', '水', '木', '金', '土']
 const date = new Date()
 let year = date.getFullYear()
 let month = date.getMonth() + 1
-const config = {
+const config = {  //連想配列
     show: 1,
 }
 

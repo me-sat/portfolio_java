@@ -56,17 +56,23 @@ public class Main extends HttpServlet {
 		String btn = request.getParameter("button");
 		System.out.println(btn);
 		
+		String ToDo = request.getParameter("todo");
+		String DeadLine = request.getParameter("deadline");
+		
 	try {	
 		if (btn.equals("Add List")) {
 			dbAccess= new Insert();
+			
+			if (ToDo.equals("") || DeadLine.equals("")) { //AddList‚Ì“à—e‚ª“ü—Í‚³‚ê‚Ä‚È‚©‚Á‚½ê‡
+				
+				request.setAttribute("message2", "“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+				doGet(request, response);
+			}
+			
 		
 		}else if(btn.equals("Done")) {
 			dbAccess= new Update();
 			
-		}else if(btn.equals("Delete")) {
-			
-			dbAccess= new Delete();
-		
 		
 		}
 		

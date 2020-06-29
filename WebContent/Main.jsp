@@ -29,6 +29,9 @@
 	
 		<div class="main-container box">
 			<form action="Main" method="post" >
+				<c:if test="${message2 != null}"> <!-- messageの中がnullじゃなかったら -->
+					<p class="message2">${message2}</p> <!-- message表示(messageの中がnullだったらfalseになるから一切表示されない) -->
+				</c:if>
 				<p>things to do</p>
 				<textarea name="todo" rows="4" class="textbox-radius" placeholder="What do you wanna do？"></textarea>
 				<p>DeadLine</p>
