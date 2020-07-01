@@ -185,6 +185,46 @@ public class Dao {
 			return n;
 
 			}
+	
+		 
+		 	
+		/**
+		 * <br>
+		 * DBから取得後、件数分のdtoに1レコードずつ情報を持たせてしてArrayListに格納<br>
+		 * @return ArrayList
+		 * @throws SQLException
+		 */
+		//日付は文字列(sql文)
+		public ArrayList<Dto> getSpecific(String deadline) throws SQLException{//DBに保存されている特定のデータを取得するメソッド/メッセージdto.javaが一行分のデータを取得する
+			
+			sql = " select * from todo where YET=0 and deadline=?;";//ユーザーが選択した締め切り日タスクを文字列として配置
+			PreparedStatement ps = null;
+			ResultSet rs = null;
+			ArrayList<Dto> list = null;
+		
+			try {
+				ps = con.prepareStatement(sql);//sql文の実行準備
+				
+				ps.setString(1, deadline);//？に０0/1を代入
+				
+				rs = ps.executeQuery();//実際の実行
+				list = new ArrayList<>();//ArrayListをインスタンス化
+				Dto dto;//大きい入れ物
+				while(rs.next()) {//rs.nextによってカーソルが移動する
+					dto = new Dto();//dtoにインスタンス化したものを与え、メッセージｄｔoのインスタンス化をしている
+					dto.setDO(rs.getString("DO"));//do列の値を取得
+					dto.setDEADLINE(rs.getDate("DEADLINE"));//date列の値を取得
+					dto.setYET(rs.getBoolean("YET"));//yet列の値を取得
+					dto.setID(rs.getInt("id"));
+					list.add(dto);
+				}
+				rs.close();//SQL自体必要がなくなったためリソースを開放する
+			}finally {//どの
+				ps.close();//SQL自体必要がなくなったためリソースを開放する
+			}
+			return list;
+		}
+			
 		
 		
 }

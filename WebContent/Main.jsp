@@ -61,16 +61,12 @@
 							</td>
 						</tr>
 					</table>
-					
-				 		
-						<!--Delete ボタン-->	
-						<!-- <input type="submit" name="button" value="Delete" class="delete-button"/> -->
 				</div>
 			</c:forEach>
 		</div>	
 
 		<div class="cal box">
-			<button id="prev" type="button" class="Before-button">Before</button>
+			<button id="prev" type="button" class="Before-button">Prev</button>
 			<button id="next" type="button" class="Next-button">Next</button>
 			<div id="calendar"></div>
 		</div>

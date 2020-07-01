@@ -6,7 +6,7 @@ header { 		/*ヘッダー（To Do List）*/
 	height: 70px;
 	border-bottom: solid 1px black;
 	font-size:　10px;
-	/*background-color:#66CC66;*/
+	
 	
 }
 
@@ -28,8 +28,7 @@ body {
 	
 	font-family: 'Caveat', cursive;
 	
-	/*text-shadow: 5px 5px 1px #66CC66;*/
-	
+
 	
 }
 
@@ -52,17 +51,18 @@ body {
 	margin: auto;
 	width: 25%;
 	height: 3.2rem;
+	
 }
 
 
 
 
-.container {
+.container {  /*headerボーダーの下全部*/
 	overflow: hidden;
 }
 
 
-.box {
+.box {/*TODOListとCal*/	
 	float: left;
 	
 }
@@ -91,7 +91,7 @@ body {
 
 
 
-.cal {		/*calendar*/
+.cal {		/*calendarボタン*/
 	
 	width: 28%;
 }
@@ -120,6 +120,7 @@ body {
 .finish {
 	border-left: solid  2px black;
 	padding-left: 10px;
+	
 }
 
 

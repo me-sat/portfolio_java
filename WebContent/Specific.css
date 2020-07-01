@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+
+header { /*ヘッダー（To Do List）*/
+
+	height: 70px;
+	border-bottom: solid 1px black;
+	font-size:　10px;
+	
+}
+
+
+body {   /*全体の字体*/
+	
+	font-family: 'Caveat', cursive;
+	
+}
+
+
+
+.container {  /*headerボーダーラインより下*/
+	overflow: hidden;
+}
+
+
+.List-title {	/*選択した日付*/
+    font-size:30px;
+	margin-top: 20px;
+	text-align: center;
+	font-family: 'Caveat', cursive;
+	
+	
+}
+
+
+
+.main-container {	/*入力フォーム*/
+
+	width: 23%;	
+	margin-left: 100px;
+	margin-top: 50px;
+	font-size: 13px;
+		
+}
+
+
+
+ .List-contants {
+	
+	text-align: left;
+	width: 28%;	
+	
+}
+
+
+
+
+
+.box{
+	float: left;
+	
+}	
+
+
+
+
+
+
+.hyou{  /*テーブル化したTODOLIST*/
+	border-left: solid 2px black;
+	color: black;
+
+}
+
+
+.Next-button {	/*ｶﾚﾝﾀﾞｰのボタン　左右*/
+	
+	margin-left: 120px;
+	
+}
+
+
